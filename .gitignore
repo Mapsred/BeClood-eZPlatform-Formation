@@ -23,3 +23,7 @@
 
 # IDE File
 .idea
+
+#Assetic
+/web/css/*
+/web/js/*
