@@ -1,9 +1,11 @@
 ### Symfony template
 # Cache and logs (Symfony2)
 /app/cache/*
-/app/logs/*
 !app/cache/.keep
+/app/logs/*
 !app/logs/.keep
+/app/sessions/*
+!/app/sessions/.keep
 
 # Parameters
 /app/config/parameters.yml
