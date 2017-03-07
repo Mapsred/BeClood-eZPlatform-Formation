@@ -1,3 +1,7 @@
+beclood_top_recettes:
+    resource: "@BeCloodTopRecettesBundle/Resources/config/routing.yml"
+    prefix:   /
+
 login:
     path:   /login
     defaults:  { _controller: ezpublish.security.controller:loginAction }
@@ -11,11 +15,11 @@ _ezpublishRoutes:
 
 _ezpublishRestRoutes:
     resource: "@EzPublishRestBundle/Resources/config/routing.yml"
-    prefix:   %ezpublish_rest.path_prefix%
+    prefix:   "%ezpublish_rest.path_prefix%"
 
 _ezpublishRestOptionsRoutes:
     resource: "@EzPublishRestBundle/Resources/config/routing.yml"
-    prefix: %ezpublish_rest.path_prefix%
+    prefix: "%ezpublish_rest.path_prefix%"
     type: rest_options
 
 _liip_imagine:

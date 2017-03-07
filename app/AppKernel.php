@@ -50,6 +50,7 @@ class AppKernel extends Kernel
             new Bazinga\Bundle\JsTranslationBundle\BazingaJsTranslationBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
             new AppBundle\AppBundle(),
+            new BeClood\TopRecettesBundle\BeCloodTopRecettesBundle(),
         );
 
         switch ($this->getEnvironment()) {

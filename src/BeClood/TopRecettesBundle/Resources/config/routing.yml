@@ -1,0 +1,3 @@
+beclood_top_recettes_homepage:
+    path:     /
+    defaults: { _controller: BeCloodTopRecettesBundle:Default:index }
