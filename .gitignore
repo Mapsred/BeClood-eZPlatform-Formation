@@ -25,3 +25,9 @@
 
 # IDE File
 .idea
+
+#ezpublish_legacy
+
+/var/cache/
+/var/log/
+/var/webdav/
