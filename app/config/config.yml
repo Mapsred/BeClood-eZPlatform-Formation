@@ -105,3 +105,8 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+ez_publish_legacy:
+    system:
+        site_admin:
+           legacy_mode: true
