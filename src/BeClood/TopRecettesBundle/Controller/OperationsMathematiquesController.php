@@ -21,7 +21,7 @@ class OperationsMathematiquesController extends Controller
     {
         $params = ["first" => $first, "second" => $second, "result" => $first + $second];
 
-        return $this->render("BeCloodTopRecettesBundle:Default:addition.html.twig", $params);
+        return $this->render("BeCloodTopRecettesBundle:OperationsMathematiques:addition.html.twig", $params);
     }
 
     /**
@@ -33,6 +33,6 @@ class OperationsMathematiquesController extends Controller
     {
         $params = ["first" => $first, "second" => $second, "result" => $first * $second];
 
-        return $this->render("BeCloodTopRecettesBundle:Default:multiplication.html.twig", $params);
+        return $this->render("BeCloodTopRecettesBundle:OperationsMathematiques:multiplication.html.twig", $params);
     }
 }
