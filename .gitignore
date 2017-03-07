@@ -15,15 +15,13 @@
 /bin/*
 /vendor/
 
-# Assets and user uploads
+# Assets, assetic and user uploads
 /web/bundles/
+/web/css/
+/web/js/
 
 # Backup entities generated with doctrine:generate:entities command
 **/Entity/*~
 
 # IDE File
 .idea
-
-#Assetic
-/web/css/*
-/web/js/*
