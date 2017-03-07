@@ -1,3 +1,19 @@
 beclood_top_recettes_homepage:
     path:     /
     defaults: { _controller: BeCloodTopRecettesBundle:Default:index }
+
+
+addition:
+    path: /addition/{first}/{second}
+    defaults: { _controller: BeCloodTopRecettesBundle:OperationsMathematiques:addition}
+    requirements:
+        first: '\d+'
+        second: '\d+'
+
+multiplication:
+    path: /multiplication/{first}/{second}
+    defaults: { _controller: BeCloodTopRecettesBundle:OperationsMathematiques:multiplication}
+    requirements:
+        first: '\d+'
+        second: '\d+'
+
