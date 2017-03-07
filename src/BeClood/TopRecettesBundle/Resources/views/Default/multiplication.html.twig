@@ -1,1 +1,7 @@
-{{ first }} x {{ second }} = {{ result }}
+{% extends "BeCloodTopRecettesBundle::pagelayout.html.twig" %}
+
+{% block title %}Addition - {{ parent() }}{% endblock %}
+
+{% block content %}
+    {{ first }} x {{ second }} = {{ result }}
+{% endblock %}
