@@ -1,6 +1,6 @@
 # This file contains defaults for optional parameters, which you can override in parameters.yml
 parameters:
-    locale_fallback: fr
+    locale_fallback: en
     locale: "%locale_fallback%"
 
     # Setting for mail system, used by SwiftMailer
