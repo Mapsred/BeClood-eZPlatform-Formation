@@ -3,6 +3,8 @@
 namespace BeClood\TopRecettesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Knp\DoctrineBehaviors\Model as ORMBehaviors;
 
 /**
  * FormulaireContact
@@ -12,7 +14,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class FormulaireContact
 {
-    /**
+
+    use ORMBehaviors\Timestampable\Timestampable;
+
+        /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -39,6 +44,7 @@ class FormulaireContact
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=255)
+     * @Assert\Email(message = "The email '{{ value }}' is not a valid email.", checkMX = true)
      */
     private $email;
 

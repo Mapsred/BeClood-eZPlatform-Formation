@@ -1,0 +1,11 @@
+{% extends "BeCloodTopRecettesBundle::pagelayout.html.twig" %}
+
+{% block title %} Créer un Contact {{ parent() }} {% endblock %}
+
+{% block content %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Envoyer" class="form-control">
+    {{ form_end(form) }}
+
+{% endblock %}

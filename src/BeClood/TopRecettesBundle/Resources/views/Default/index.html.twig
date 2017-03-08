@@ -4,13 +4,23 @@
 {% block title %}Contacts {{ parent() }}{% endblock %}
 
 {% block content %}
+
+    {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+            <div class="alert alert-{{ type }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
     <table class="table table-striped">
         <thead>
         <tr>
             <th>Nom</th>
             <th>Prénom</th>
             <th>Email</th>
-            <th>Date</th>
+            <th>Date de Naissance</th>
+            <th>Date de création</th>
             <th>Message</th>
         </tr>
         </thead>
@@ -21,6 +31,7 @@
                 <td>{{ contact.prenom }}</td>
                 <td>{{ contact.email }}</td>
                 <td>{{ contact.dateNaissance|date('Y-m-d') }}</td>
+                <td>{{ contact.createdAt|date('Y-m-d H:i:s') }}</td>
                 <td>{{ contact.message }}</td>
             </tr>
         {% endfor %}
