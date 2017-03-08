@@ -50,6 +50,8 @@ class AppKernel extends Kernel
             new Bazinga\Bundle\JsTranslationBundle\BazingaJsTranslationBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
             new eZ\Bundle\EzPublishLegacyBundle\EzPublishLegacyBundle($this),
+            new Knp\DoctrineBehaviors\Bundle\DoctrineBehaviorsBundle(),
+
             new AppBundle\AppBundle(),
             new BeClood\TopRecettesBundle\BeCloodTopRecettesBundle(),
         );

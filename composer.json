@@ -43,7 +43,8 @@
         "ezsystems/content-on-the-fly-prototype": "~0.1.7",
         "willdurand/js-translation-bundle": "dev-master#7e6839be69d7d5e0758ed0b014d13e1ff1e709d1",
         "ezsystems/legacy-bridge": "^1.0.4",
-        "doctrine/orm": "^2.5"
+        "doctrine/orm": "^2.5",
+        "knplabs/doctrine-behaviors": "~1.1"
     },
     "require-dev": {
         "ezsystems/ezplatform-i18n": "^1.0",
