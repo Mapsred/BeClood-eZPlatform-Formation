@@ -17,7 +17,7 @@ class FormulaireContact
 
     use ORMBehaviors\Timestampable\Timestampable;
 
-        /**
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -30,6 +30,7 @@ class FormulaireContact
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=255)
+     * @Assert\NotBlank(message="Ce champs ne doit pas être vide")
      */
     private $prenom;
 
@@ -37,6 +38,7 @@ class FormulaireContact
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=255)
+     * @Assert\NotBlank(message="Ce champs ne doit pas être vide")
      */
     private $nom;
 
@@ -45,6 +47,7 @@ class FormulaireContact
      *
      * @ORM\Column(name="email", type="string", length=255)
      * @Assert\Email(message = "The email '{{ value }}' is not a valid email.", checkMX = true)
+     * @Assert\NotBlank(message="Ce champs ne doit pas être vide")
      */
     private $email;
 
@@ -52,6 +55,7 @@ class FormulaireContact
      * @var \DateTime
      *
      * @ORM\Column(name="dateNaissance", type="date")
+     * @Assert\NotBlank()
      */
     private $dateNaissance;
 
@@ -59,6 +63,7 @@ class FormulaireContact
      * @var string
      *
      * @ORM\Column(name="message", type="text")
+     * @Assert\NotBlank(message="Ce champs ne doit pas être vide")
      */
     private $message;
 
