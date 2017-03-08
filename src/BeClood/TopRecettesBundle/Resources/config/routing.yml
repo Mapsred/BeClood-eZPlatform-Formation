@@ -20,3 +20,7 @@ multiplication:
 beclood_top_recettes_contact:
   path: /contact
   defaults: { _controller: BeCloodTopRecettesBundle:Default:contact }
+
+ezplatform_api:
+  path: /api/{id}
+  defaults: { _controller: BeCloodTopRecettesBundle:EzPlatform:Api, id: 52 }

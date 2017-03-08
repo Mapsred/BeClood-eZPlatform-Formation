@@ -1,0 +1,56 @@
+{% extends "BeCloodTopRecettesBundle::pagelayout.html.twig" %}
+
+{% block title %} API  {{ parent() }}{% endblock %}
+
+
+{% block content %}
+    <div class="col-md-4" style="margin-top: 20px;">
+        <ul class="list-group">
+            <li class="list-group-item active">Attribus disponibles</li>
+            {% for attribute in attributes %}
+                <li class="list-group-item">{{ attribute }}</li>
+            {% endfor %}
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item active">Fields</li>
+            {% for field in fields %}
+                <li class="list-group-item">{{ field.fieldDefIdentifier }} {{ field.value.text is defined ? ": "~field.value.text : "" }}</li>
+            {% endfor %}
+        </ul>
+        <ul class="list-group">
+            <li class="list-group-item active">Attribut title</li>
+            <li class="list-group-item">{{ title.value.text }}</li>
+        </ul>
+    </div>
+
+    <div class="col-md-4" style="margin-top: 20px;">
+        <ul class="list-group">
+            <li class="list-group-item active">ContentInfo</li>
+            <li class="list-group-item">id : {{ contentInfo.id }}</li>
+            <li class="list-group-item">contentTypeId : {{ contentInfo.contentTypeId }}</li>
+            <li class="list-group-item">name : {{ contentInfo.name }}</li>
+            <li class="list-group-item">sectionId : {{ contentInfo.sectionId }}</li>
+            <li class="list-group-item">currentVersionNo : {{ contentInfo.currentVersionNo }}</li>
+            <li class="list-group-item">published : {{ contentInfo.published }}</li>
+            <li class="list-group-item">ownerId : {{ contentInfo.ownerId }}</li>
+            <li class="list-group-item">modificationDate : {{ contentInfo.modificationDate|date('Y-m-d') }}</li>
+            <li class="list-group-item">publishedDate : {{ contentInfo.publishedDate|date('Y-m-d') }}</li>
+            <li class="list-group-item">alwaysAvailable : {{ contentInfo.alwaysAvailable }}</li>
+            <li class="list-group-item">remoteId : {{ contentInfo.remoteId }}</li>
+            <li class="list-group-item">mainLanguageCode : {{ contentInfo.mainLanguageCode }}</li>
+            <li class="list-group-item">mainLocationId : {{ contentInfo.mainLocationId }}</li>
+        </ul>
+    </div>
+
+    {% for id, location in locations %}
+        <div class="col-md-4" style="margin-top: 20px;">
+            <ul class="list-group">
+                <li class="list-group-item active">Attributs Location {{ id }}</li>
+                {% for value in location %}
+                    <li class="list-group-item">{{ value }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+
+{% endblock %}
