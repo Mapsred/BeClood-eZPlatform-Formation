@@ -1,0 +1,14 @@
+{% extends "EzPublishCoreBundle::content_fields.html.twig" %}
+{% block ezobjectrelationlist_field %}
+    {% spaceless %}
+        {% if not ez_is_field_empty( content, field ) %}
+            <div {{ block( 'field_attributes' ) }}>
+                {% for contentId in field.value.destinationContentIds %}
+                    <div class="content-object-child">
+                        {{ render( controller( "ez_content:viewAction", {'contentId': contentId, 'viewType': 'embed', 'noLayout': 1} ) ) }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endspaceless %}
+{% endblock %}
