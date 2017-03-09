@@ -1,0 +1,14 @@
+ezpublish:
+  system:
+    site_group:
+      location_view:
+        full:
+          recette:
+            template: BeCloodTopRecettesBundle:full:recette.html.twig
+            match:
+              Identifier\ContentType: recette
+        embed:
+          recette:
+            template: BeCloodTopRecettesBundle:embed:recette.html.twig
+            match:
+              Identifier\ContentType: recette

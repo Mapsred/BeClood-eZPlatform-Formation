@@ -1,0 +1,18 @@
+{% set class = class is not defined ? "danger" : class %}
+
+<div class="panel panel-{{ class }}" style="margin-top:20px;">
+    <div class="panel-heading">
+        <div class="panel-title">{{ ez_content_name( content ) }}</div>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-8">
+            <p>Ingrédients : {{ ez_render_field( content, "ingredients" ) }}</p>
+            <div>{{ ez_render_field( content, "contenu" ) }}</div>
+            <p>Temps préparation : {{ ez_render_field(content, 'temps_preparation') }}</p>
+            <p>Temps cuisson : {{ ez_render_field(content, 'temps_cuisson') }}</p>
+        </div>
+        <div class="col-md-4">
+            {{ ez_render_field( content, 'image', { 'parameters':{ 'alias': 'medium'} } ) }}
+        </div>
+    </div>
+</div>

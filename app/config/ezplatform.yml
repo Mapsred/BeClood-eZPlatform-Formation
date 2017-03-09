@@ -1,3 +1,6 @@
+imports:
+    - { resource: override.yml }
+
 ezpublish:
     # Repositories configuration, setup default repository to support solr if enabled
     repositories:
@@ -29,6 +32,23 @@ ezpublish:
             # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
             # all eng-GB data to other locales first.
             languages: [eng-GB]
+            image_variations:
+                small:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [100, 160] }
+                medium:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [200, 290] }
+                listitem:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [130, 190] }
+                articleimage:
+                    reference: null
+                    filters:
+                        - { name: geometry/scalewidth, params: [770] }
 
 ez_publish_legacy:
     system:

@@ -1,0 +1,23 @@
+{% extends "BeCloodTopRecettesBundle::pagelayout.html.twig" %}
+
+{% block title %}{{ ez_content_name( content ) }} {{ parent() }}{% endblock %}
+
+
+{% block content %}
+
+    {% set image = content.fields.image %}
+
+    {% include "BeCloodTopRecettesBundle:embed:recette.html.twig" with {'content': content, 'class': 'default'} %}
+
+    <h2>Recettes liées</h2>
+
+    {{ ez_render_field( content, 'recettes_liees') }}
+{% endblock %}
+
+
+
+{% block footer %}
+    <div class="container">
+        <p class="text-muted"><a href="{{ path('beclood_top_recettes_contact') }}">Contact</a></p>
+    </div>
+{% endblock %}

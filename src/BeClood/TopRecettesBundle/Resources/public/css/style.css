@@ -30,3 +30,9 @@ footer .container {
 footer .container .text-muted {
     margin: 20px 0;
 }
+
+
+.ezobjectrelationlist-field {
+    list-style: none;
+    padding-left: 0;
+}
