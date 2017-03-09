@@ -25,6 +25,4 @@ ezpublish:
               Identifier\ContentType: recette
 
       field_templates:
-        -
-          template: BeCloodTopRecettesBundle:fields:content_fields.html.twig
-          priority: 10
+        - { template: BeCloodTopRecettesBundle:fields:content_fields.html.twig, priority: 10 }
