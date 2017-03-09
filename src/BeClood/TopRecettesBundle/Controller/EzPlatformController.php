@@ -49,7 +49,7 @@ class EzPlatformController extends Controller
         $query = new Query([
             'filter' => new Query\Criterion\ContentTypeIdentifier('recette'),
             'sortClauses' => [new Query\SortClause\DatePublished(Query::SORT_DESC)],
-            'limit' => 10
+            'limit' => $this->get('ezpublish.config.resolver')->getParameter('content.max_recettes.setting', 'beclood_top_recettes')
         ]);
         $params['recettes'] = $this->get('beclood_top_recettes.search_helper')
             ->buildList($searchService->findContent($query));

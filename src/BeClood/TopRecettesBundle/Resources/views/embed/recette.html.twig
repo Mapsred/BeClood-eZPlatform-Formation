@@ -3,13 +3,9 @@
 <div class="panel panel-{{ class }}" style="margin-top:20px;">
     <div class="panel-heading">
         <div class="panel-title">
-            {% if link is defined and link == true %}
-                <a href="{{ path('ez_urlalias', {'locationId': content.contentInfo.mainLocationId}) }}">
-                    {{ ez_content_name( content ) }}
-                </a>
-            {% else %}
+            <a href="{{ path('ez_urlalias', {'contentId': content.id}) }}">
                 {{ ez_content_name( content ) }}
-            {% endif %}
+            </a>
         </div>
     </div>
     <div class="panel-body">

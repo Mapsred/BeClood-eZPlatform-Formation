@@ -1,0 +1,3 @@
+parameters:
+  max_recettes: 10
+  beclood_top_recettes.default.content.max_recettes.setting: 10

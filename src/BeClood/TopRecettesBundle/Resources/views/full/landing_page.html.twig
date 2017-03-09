@@ -4,8 +4,24 @@
 
 {% block content %}
     <h1>{{ ez_content_name(content)|capitalize }} <small>{{ recettes|length }} recettes</small></h1>
-    {% for recette in recettes %}
-        {% include "BeCloodTopRecettesBundle:embed:recette.html.twig" with {'content': recette, 'class': 'default', 'link': true} %}
-    {% endfor %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th>{{ ez_field_name(recettes|last, 'titre') }}</th>
+            <th>{{ ez_field_name(recettes|last, 'ingredients') }}</th>
+            <th>{{ ez_field_name(recettes|last, 'contenu') }}</th>
+            <th>{{ ez_field_name(recettes|last, 'temps_preparation') }}</th>
+            <th>{{ ez_field_name(recettes|last, 'temps_cuisson') }}</th>
+            <th>{{ ez_field_name(recettes|last, 'image') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for recette in recettes %}
+            <tr>
+                {{ render(controller("ez_content:viewAction", {"contentId": recette.id, "viewType": "table"})) }}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
 {% endblock %}

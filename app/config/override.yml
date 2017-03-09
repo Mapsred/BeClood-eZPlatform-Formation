@@ -18,3 +18,13 @@ ezpublish:
             template: BeCloodTopRecettesBundle:embed:recette.html.twig
             match:
               Identifier\ContentType: recette
+        table:
+          recette:
+            template: BeCloodTopRecettesBundle:table:recette.html.twig
+            match:
+              Identifier\ContentType: recette
+
+      field_templates:
+        -
+          template: BeCloodTopRecettesBundle:fields:content_fields.html.twig
+          priority: 10
