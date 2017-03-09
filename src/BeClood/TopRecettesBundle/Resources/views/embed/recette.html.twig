@@ -1,5 +1,6 @@
 {% set class = class is not defined ? "danger" : class %}
-
+{% set language = ezpublish.siteaccess.name == "site_fr" ? "eng-GB": "fre-FR" %}
+{% set language_name = ezpublish.siteaccess.name == "site_fr" ? "anglaise": "française" %}
 <div class="panel panel-{{ class }}" style="margin-top:20px;">
     <div class="panel-heading">
         <div class="panel-title">
@@ -15,6 +16,9 @@
             <p>{{ ez_field_name(content, 'temps_preparation') }}
                 : {{ ez_render_field(content, 'temps_preparation') }}</p>
             <p>{{ ez_field_name(content, 'temps_cuisson') }} : {{ ez_render_field(content, 'temps_cuisson') }}</p>
+            {% if language in content.versionInfo.languageCodes %}
+                <p><a href="{{ url(ez_route(null, {'language': language})) }}">Version {{ language_name }}</a></p>
+            {% endif %}
         </div>
         <div class="col-md-4">
             {{ ez_render_field( content, 'image', { 'parameters':{ 'alias': 'medium'} } ) }}

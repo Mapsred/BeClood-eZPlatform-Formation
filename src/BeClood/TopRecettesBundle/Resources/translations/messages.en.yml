@@ -1,5 +1,9 @@
-report_error: your message has not been sent. Please try later...
-report_success: your message has been sent
-alert_success: Your alert has been saved !
-alert_error: An error occurred while saving your alert
-removealert_success: Your alert has been removed !
+alert:
+  report_error: your message has not been sent. Please try later...
+  report_success: your message has been sent
+  alert_success: Your alert has been saved !
+  alert_error: An error occurred while saving your alert
+  removealert_success: Your alert has been removed !
+  report_error_name: "%name% your message has not been sent. Please try later..."
+  apples: '{0} There are no apples|{1} There is one apple|]1,19] There are %count% apples|[20,Inf[ There are many apples'
+

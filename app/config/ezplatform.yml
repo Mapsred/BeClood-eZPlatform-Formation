@@ -12,16 +12,21 @@ ezpublish:
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list: [site, admin]
+        list: [site, admin, site_fr]
         groups:
             site_group: [site, admin]
+            front_group: [site_fr, site]
         default_siteaccess: site
         match:
             URIElement: 1
 
     # System settings, grouped by siteaccess and/or siteaccess group
     system:
-        site_group:
+        site_fr:
+            languages: [fre-FR, eng-GB]
+        site:
+            languages: [eng-GB]
+        default:
             # Pool to use for cache, needs to be different per repository (database).
             cache_pool_name: '%cache_pool%'
             # These reflect the current installers, complete installation before you change them. For changing var_dir
@@ -31,7 +36,7 @@ ezpublish:
             # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
             # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
             # all eng-GB data to other locales first.
-            languages: [eng-GB]
+#            languages: [eng-GB]
             image_variations:
                 small:
                     reference: null

@@ -1,6 +1,6 @@
 ezpublish:
   system:
-    site_group:
+    front_group:
       location_view:
         full:
           recette:

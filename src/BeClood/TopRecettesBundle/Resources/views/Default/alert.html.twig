@@ -15,28 +15,53 @@
         <tbody>
         <tr>
             <td>report_error</td>
-            <td>{{ 'report_error'|trans({}, null, "en") }}</td>
-            <td>{{ 'report_error'|trans({}, null, "fr") }}</td>
+            <td>{{ 'alert.report_error'|trans({}, null, "en") }}</td>
+            <td>{{ 'alert.report_error'|trans({}, null, "fr") }}</td>
         </tr>
         <tr>
             <td>report_success</td>
-            <td>{{ 'report_success'|trans({}, null, "en") }}</td>
-            <td>{{ 'report_success'|trans({}, null, "fr") }}</td>
+            <td>{{ 'alert.report_success'|trans({}, null, "en") }}</td>
+            <td>{{ 'alert.report_success'|trans({}, null, "fr") }}</td>
         </tr>
         <tr>
             <td>alert_success</td>
-            <td>{{ 'alert_success'|trans({}, null, "en") }}</td>
-            <td>{{ 'alert_success'|trans({}, null, "fr") }}</td>
+            <td>{{ 'alert.alert_success'|trans({}, null, "en") }}</td>
+            <td>{{ 'alert.alert_success'|trans({}, null, "fr") }}</td>
         </tr>
         <tr>
             <td>alert_error</td>
-            <td>{{ 'alert_error'|trans({}, null, "en") }}</td>
-            <td>{{ 'alert_error'|trans({}, null, "fr") }}</td>
+            <td>{{ 'alert.alert_error'|trans({}, null, "en") }}</td>
+            <td>{{ 'alert.alert_error'|trans({}, null, "fr") }}</td>
         </tr>
         <tr>
             <td>removealert_success</td>
-            <td>{{ 'removealert_success'|trans({}, null, "en") }}</td>
-            <td>{{ 'removealert_success'|trans({}, null, "fr") }}</td>
+            <td>{{ 'alert.removealert_success'|trans({}, null, "en") }}</td>
+            <td>{{ 'alert.removealert_success'|trans({}, null, "fr") }}</td>
+        </tr>
+        <tr>
+            <td>report_error_name</td>
+            <td>{{ 'alert.report_error_name'|trans({'%name%': 'Fabien'}, null, "en") }}</td>
+            <td>{{ 'alert.report_error_name'|trans({'%name%': 'Fabien'}, null, "fr") }}</td>
+        </tr>
+        <tr>
+            <td>apples (0 Pommes)</td>
+            <td>{{ 'alert.apples'|transchoice(0, {}, null, "en") }}</td>
+            <td>{{ 'alert.apples'|transchoice(0, {}, null, "fr") }}</td>
+        </tr>
+        <tr>
+            <td>apples (1 Pomme)</td>
+            <td>{{ 'alert.apples'|transchoice(1, {}, null, "en") }}</td>
+            <td>{{ 'alert.apples'|transchoice(1, {}, null, "fr") }}</td>
+        </tr>
+        <tr>
+            <td>apples (10 Pommes)</td>
+            <td>{{ 'alert.apples'|transchoice(10, {}, null, "en") }}</td>
+            <td>{{ 'alert.apples'|transchoice(10, {}, null, "fr") }}</td>
+        </tr>
+        <tr>
+            <td>apples (20+ Pommes)</td>
+            <td>{{ 'alert.apples'|transchoice(20, {}, null, "en") }}</td>
+            <td>{{ 'alert.apples'|transchoice(20, {}, null, "fr") }}</td>
         </tr>
         </tbody>
     </table>

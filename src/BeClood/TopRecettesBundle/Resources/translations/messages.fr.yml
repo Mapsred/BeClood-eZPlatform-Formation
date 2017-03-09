@@ -1,5 +1,10 @@
-report_error: votre message n'a pas été envoyé. Veuillez réessayer plus tard...
-report_success: votre message a bien été transmis.
-alert_success: Votre alerte a bien été enregistrée !
-alert_error: Une erreur est survenue lors de l'enregistrement de votre alerte...
-removealert_success: Votre alerte a bien été supprimée !
+alert:
+  report_error: votre message n'a pas été envoyé. Veuillez réessayer plus tard...
+  report_success: votre message a bien été transmis.
+  alert_success: Votre alerte a bien été enregistrée !
+  alert_error: Une erreur est survenue lors de l'enregistrement de votre alerte...
+  removealert_success: Votre alerte a bien été supprimée !
+  report_error_name: "%name% votre message n'a pas été envoyé. Veuillez réessayer plus tard..."
+  apples: '{0} Il n''y a pas de pommes|{1} Il y a une pomme|]1,19] Il y a %count% pommes|[20,Inf[ Il y a beaucoup de pommes'
+
+
