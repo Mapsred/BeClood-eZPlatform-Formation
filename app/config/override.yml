@@ -7,6 +7,12 @@ ezpublish:
             template: BeCloodTopRecettesBundle:full:recette.html.twig
             match:
               Identifier\ContentType: recette
+          landing_page:
+            controller: BeCloodTopRecettesBundle:EzPlatform:showLandingPage
+            template: BeCloodTopRecettesBundle:full:landing_page.html.twig
+            match:
+              Id\Location: 2
+              Identifier\ContentType: [landing_page, folder]
         embed:
           recette:
             template: BeCloodTopRecettesBundle:embed:recette.html.twig

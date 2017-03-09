@@ -31,7 +31,11 @@
 </div>
 
 <footer class="footer">
-    {% block footer %}{% endblock %}
+    {% block footer %}
+        <div class="container">
+            <p class="text-muted"><a href="{{ path('beclood_top_recettes_contact') }}">Contact</a></p>
+        </div>
+    {% endblock %}
 </footer>
 </body>
 </html>

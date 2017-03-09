@@ -2,3 +2,5 @@ services:
     beclood_top_recettes.formulairecontact_manager:
         class: BeClood\TopRecettesBundle\Utils\FormulaireContactManager
         arguments: ["@doctrine.orm.entity_manager"]
+    beclood_top_recettes.search_helper:
+        class: BeClood\TopRecettesBundle\Utils\SearchHelper
