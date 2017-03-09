@@ -55,4 +55,9 @@ class DefaultController extends Controller
 
         return $this->render('BeCloodTopRecettesBundle:Default:contact.html.twig', ['form' => $form->createView()]);
     }
+
+    public function alertAction()
+    {
+        return $this->render("BeCloodTopRecettesBundle:Default:alert.html.twig");
+    }
 }

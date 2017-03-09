@@ -24,3 +24,7 @@ beclood_top_recettes_contact:
 ezplatform_api:
   path: /api/{id}
   defaults: { _controller: BeCloodTopRecettesBundle:EzPlatform:Api, id: 52 }
+
+alert:
+  path: /alert
+  defaults: { _controller: BeCloodTopRecettesBundle:Default:alert }

@@ -1,0 +1,43 @@
+{% extends "BeCloodTopRecettesBundle::pagelayout.html.twig" %}
+
+{% block title %}Alertes {{ parent() }}{% endblock %}
+
+{% block content %}
+    <h1>Alertes</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Anglais</th>
+            <th>Français</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>report_error</td>
+            <td>{{ 'report_error'|trans({}, null, "en") }}</td>
+            <td>{{ 'report_error'|trans({}, null, "fr") }}</td>
+        </tr>
+        <tr>
+            <td>report_success</td>
+            <td>{{ 'report_success'|trans({}, null, "en") }}</td>
+            <td>{{ 'report_success'|trans({}, null, "fr") }}</td>
+        </tr>
+        <tr>
+            <td>alert_success</td>
+            <td>{{ 'alert_success'|trans({}, null, "en") }}</td>
+            <td>{{ 'alert_success'|trans({}, null, "fr") }}</td>
+        </tr>
+        <tr>
+            <td>alert_error</td>
+            <td>{{ 'alert_error'|trans({}, null, "en") }}</td>
+            <td>{{ 'alert_error'|trans({}, null, "fr") }}</td>
+        </tr>
+        <tr>
+            <td>removealert_success</td>
+            <td>{{ 'removealert_success'|trans({}, null, "en") }}</td>
+            <td>{{ 'removealert_success'|trans({}, null, "fr") }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

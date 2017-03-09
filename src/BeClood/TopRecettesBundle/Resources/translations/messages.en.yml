@@ -1,0 +1,5 @@
+report_error: your message has not been sent. Please try later...
+report_success: your message has been sent
+alert_success: Your alert has been saved !
+alert_error: An error occurred while saving your alert
+removealert_success: Your alert has been removed !
