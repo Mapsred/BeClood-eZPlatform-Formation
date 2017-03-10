@@ -8,7 +8,6 @@
 
 namespace BeClood\TopRecettesBundle\Controller;
 
-use eZ\Publish\API\Repository\Values\Content\Query;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -45,14 +44,7 @@ class EzPlatformController extends Controller
      */
     public function showLandingPageAction($locationId, $viewType, $layout = false, array $params = [])
     {
-        $searchService = $this->get('ezpublish.api.repository')->getSearchService();
-        $query = new Query([
-            'filter' => new Query\Criterion\ContentTypeIdentifier('recette'),
-            'sortClauses' => [new Query\SortClause\DatePublished(Query::SORT_DESC)],
-            'limit' => $this->get('ezpublish.config.resolver')->getParameter('content.max_recettes.setting', 'beclood_top_recettes')
-        ]);
-        $params['recettes'] = $this->get('beclood_top_recettes.search_helper')
-            ->buildList($searchService->findContent($query));
+        $params['recettes'] = $this->get('becloop_top_recettes.recettes_helper')->getLastRecettes();
 
         $response = $this->get('ez_content')->viewLocation($locationId, $viewType, $layout, $params);
 
