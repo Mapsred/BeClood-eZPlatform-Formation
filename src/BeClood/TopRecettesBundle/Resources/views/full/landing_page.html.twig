@@ -18,7 +18,7 @@
         <tbody>
         {% for recette in recettes %}
             <tr>
-                {{ render(controller("ez_content:viewAction", {"contentId": recette.id, "viewType": "table"})) }}
+                {{ render_esi(controller("ez_content:viewAction", {"contentId": recette.id, "viewType": "table"})) }}
             </tr>
         {% endfor %}
         </tbody>

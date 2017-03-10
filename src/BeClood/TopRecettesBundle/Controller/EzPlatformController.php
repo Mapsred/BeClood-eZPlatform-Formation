@@ -54,7 +54,9 @@ class EzPlatformController extends Controller
         $params['recettes'] = $this->get('beclood_top_recettes.search_helper')
             ->buildList($searchService->findContent($query));
 
-        return $this->get('ez_content')->viewLocation($locationId, $viewType, $layout, $params);
+        $response = $this->get('ez_content')->viewLocation($locationId, $viewType, $layout, $params);
+
+        return $response->setSharedMaxAge(30);
     }
 
 }
