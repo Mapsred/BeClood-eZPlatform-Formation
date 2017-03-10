@@ -7,3 +7,6 @@ services:
     becloop_top_recettes.recettes_helper:
         class: BeClood\TopRecettesBundle\Utils\RecettesHelper
         arguments: ["@ezpublish.api.repository", "@beclood_top_recettes.search_helper", "@ezpublish.config.resolver"]
+    becloop_top_recettes.mailer_helper:
+        class: BeClood\TopRecettesBundle\Utils\MailerHelper
+        arguments: ["@twig", "@mailer"]

@@ -1,18 +1,26 @@
-{% set language = ezpublish.siteaccess.name == "site_fr" ? "eng-GB": "fre-FR" %}
-{% set language_name = ezpublish.siteaccess.name == "site_fr" ? "anglaise": "française" %}
+{% set siteaccessName = siteaccess is defined ? siteaccess.name : ezpublish.siteaccess.name %}
+{% set language = siteaccessName == "site_fr" ? "eng-GB": "fre-FR" %}
+{% set language_name = siteaccessName == "site_fr" ? "anglaise": "française" %}
 <td>
-    <a href="{{ path('ez_urlalias', {'contentId': content.id}) }}">
-        {{ ez_content_name( content ) }}
-    </a>
+    {% if email is defined %}
+        <a href="{{ url('ez_urlalias', {'contentId': content.id, 'siteaccess': siteaccessName}) }}">{{ ez_content_name( content ) }}</a>
+    {% else %}
+        <a href="{{ path('ez_urlalias', {'contentId': content.id}) }}">{{ ez_content_name( content ) }}</a>
+    {% endif %}
 </td>
 <td>{{ ez_render_field( content, "ingredients" ) }}</td>
 <td>
     {{ ez_render_field( content, "contenu" ) }}
     <br>
-    {% if language in content.versionInfo.languageCodes %}
+    {% if language in content.versionInfo.languageCodes and email is not defined %}
         <a href="{{ url( ez_route( 'ez_urlalias', {"language": "fre-FR", 'contentId': content.id} ) ) }}">{{ ez_content_name( content ) }}</a>
     {% endif %}
 </td>
 <td>{{ ez_render_field( content, "temps_preparation" ) }}</td>
 <td>{{ ez_render_field( content, "temps_cuisson" ) }}</td>
-<td>{{ ez_render_field( content, "image", { 'parameters':{ 'alias': 'medium'} } ) }}</td>
+{% set field = content.field("image") %}
+{% set imageAlias = ez_image_alias( field, content.versionInfo, 'medium' ) %}
+<td>
+    <img src="{{ asset(imageAlias.uri) }}" width="{{ imageAlias.width }}" height="{{ imageAlias.height }}"
+         alt="{{ field.value.alternativeText }}" />
+</td>

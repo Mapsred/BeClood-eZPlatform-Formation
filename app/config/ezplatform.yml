@@ -18,7 +18,9 @@ ezpublish:
             front_group: [site_fr, site]
         default_siteaccess: site
         match:
-            URIElement: 1
+            Map\Host:
+              fr.ezplatform_formation.loc: site_fr
+              ezplatform_formation.loc: site
 
     # System settings, grouped by siteaccess and/or siteaccess group
     system:
